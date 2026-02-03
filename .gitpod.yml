@@ -1,4 +1,4 @@
-image: firstdraft/appdev-rails-8-template
+image: firstdraft/appdev-rails-8-phase2
 
 tasks:
   - before: |

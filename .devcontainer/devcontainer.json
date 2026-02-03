@@ -12,7 +12,7 @@
     "PGUSER": "student",
     "PGPASSWORD": "postgres",
     "PGDATABASE": "postgres",
-    "DATABASE_URL": "postgres://student:postgres@localhost:5432/rails_8_template?encoding=utf8&pool=5&timeout=5000"
+    "DATABASE_URL": "postgres://student:postgres@localhost:5432/rails_8_industrial_template?encoding=utf8&pool=5&timeout=5000"
   },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
