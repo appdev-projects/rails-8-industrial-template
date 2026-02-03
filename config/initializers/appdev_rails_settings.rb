@@ -12,5 +12,7 @@ Rails.application.configure do
 end
 
 # Phase 2 uses standard Rails security defaults
-# - Forgery protection is ON (no skip_forgery_protection in ApplicationController)
+# - Forgery protection is ON
 # - belongs_to associations require presence by default
+Rails.application.config.action_controller.default_protect_from_forgery = true
+Rails.application.config.active_record.belongs_to_required_by_default = true
