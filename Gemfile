@@ -40,7 +40,6 @@ gem "pundit"                          # Authorization (who can do what)
 # ==============================================================================
 # Feature Gems - Forms & Validation
 # ==============================================================================
-gem "simple_form"                     # Easier form building
 gem "strip_attributes"                # Remove whitespace from model attributes
 gem "validate_url"                    # URL validation for models
 
