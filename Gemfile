@@ -67,6 +67,11 @@ gem "http"                            # Simple HTTP client for APIs
 gem "rollbar"                         # Error tracking in production
 
 # ==============================================================================
+# Feature Gems - AI
+# ==============================================================================
+gem "ai-chat", "~> 0.5.4"             # AI::Chat integration via OpenAI APIs
+
+# ==============================================================================
 # Development & Test - Debugging, Testing & Code Quality
 # ==============================================================================
 group :development, :test do
