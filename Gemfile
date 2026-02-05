@@ -23,7 +23,6 @@ gem "solid_cable"                     # Database-backed Action Cable
 # Performance & DevOps
 # ==============================================================================
 gem "bootsnap", require: false        # Faster boot times via caching
-gem "kamal", require: false           # Docker container deployment
 gem "thruster", require: false        # HTTP caching/compression for Puma
 
 # ==============================================================================
