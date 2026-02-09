@@ -1,9 +1,6 @@
 source "https://rubygems.org"
 
-# ==============================================================================
-# Rails Core
-# ==============================================================================
-gem "rails", "~> 8.0.2"              # The web framework
+gem "rails", "~> 8.0.2"               # The web framework
 gem "propshaft"                       # Asset pipeline (CSS, JS, images)
 gem "pg", "~> 1.1"                    # PostgreSQL database adapter
 gem "puma", ">= 5.0"                  # Web server
@@ -11,78 +8,36 @@ gem "importmap-rails"                 # JavaScript with ESM import maps
 gem "turbo-rails"                     # Hotwire page acceleration (SPA-like)
 gem "stimulus-rails"                  # Hotwire JavaScript framework
 gem "jbuilder"                        # Build JSON APIs
-
-# ==============================================================================
-# Rails 8 Solid Adapters (database-backed cache, jobs, websockets)
-# ==============================================================================
 gem "solid_cache"                     # Database-backed Rails.cache
 gem "solid_queue"                     # Database-backed Active Job
 gem "solid_cable"                     # Database-backed Action Cable
-
-# ==============================================================================
-# Performance & DevOps
-# ==============================================================================
 gem "bootsnap", require: false        # Faster boot times via caching
 gem "thruster", require: false        # HTTP caching/compression for Puma
-
-# ==============================================================================
-# Windows-specific
-# ==============================================================================
-gem "tzinfo-data", platforms: %i[windows jruby]
-
-# ==============================================================================
-# Feature Gems - Authentication & Authorization
-# ==============================================================================
+gem "tzinfo-data", platforms: %i[windows jruby] # Timezone data for Windows/JRuby
 gem "devise"                          # User authentication (sign up, sign in, etc.)
 gem "pundit"                          # Authorization (who can do what)
-
-# ==============================================================================
-# Feature Gems - Forms & Validation
-# ==============================================================================
 gem "strip_attributes"                # Remove whitespace from model attributes
 gem "validate_url"                    # URL validation for models
-
-# ==============================================================================
-# Feature Gems - File Uploads & Images
-# ==============================================================================
 gem "carrierwave"                     # File uploads
 gem "cloudinary"                      # Cloud image storage and CDN
-
-# ==============================================================================
-# Feature Gems - Data & Search
-# ==============================================================================
 gem "faker"                           # Generate fake data for testing/seeds
 gem "kaminari"                        # Pagination
 gem "pagy"                            # Alternative pagination (faster)
 gem "ransack"                         # Search and filtering
-
-# ==============================================================================
-# Feature Gems - Utilities
-# ==============================================================================
 gem "active_link_to"                  # Highlight current page links
 gem "dotenv"                          # Load environment variables from .env
 gem "http"                            # Simple HTTP client for APIs
 gem "rollbar"                         # Error tracking in production
-
-# ==============================================================================
-# Feature Gems - AI
-# ==============================================================================
 gem "ai-chat", "~> 0.5.4"             # AI::Chat integration via OpenAI APIs
 
-# ==============================================================================
-# Development & Test - Debugging, Testing & Code Quality
-# ==============================================================================
 group :development, :test do
-  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Ruby debugger
   gem "brakeman", "~> 7.1.1", require: false    # Security vulnerability scanner
   gem "rspec-rails", "~> 7.1.1"                 # Testing framework
   gem "rubocop-rails-omakase", require: false   # Ruby code style linting
   gem "grade_runner", "~> 0.0.13"               # Automated grading
 end
 
-# ==============================================================================
-# Development Only - Better Development Experience
-# ==============================================================================
 group :development do
   gem "amazing_print"                 # Pretty print Ruby objects in console
   gem "annotaterb"                    # Add schema info to model files
@@ -98,9 +53,6 @@ group :development do
   gem "web-console"                   # Console on exception pages
 end
 
-# ==============================================================================
-# Test Only - Testing Tools
-# ==============================================================================
 group :test do
   gem "capybara"                      # Browser testing
   gem "rails-controller-testing"      # Controller test helpers
