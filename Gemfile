@@ -14,7 +14,6 @@ gem "solid_cable"                     # Database-backed Action Cable
 gem "bootsnap", require: false        # Faster boot times via caching
 gem "thruster", require: false        # HTTP caching/compression for Puma
 gem "tzinfo-data", platforms: %i[windows jruby] # Timezone data for Windows/JRuby
-gem "validate_url"                    # URL validation for models
 gem "active_link_to"                  # Highlight current page links
 gem "dotenv"                          # Load environment variables from .env
 gem "http"                            # Simple HTTP client for APIs
