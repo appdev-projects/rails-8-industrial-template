@@ -31,7 +31,7 @@ group :development, :test do
   gem "brakeman", "~> 7.1.1", require: false    # Security vulnerability scanner
   gem "rspec-rails", "~> 7.1.1"                 # Testing framework
   gem "rubocop-rails-omakase", require: false   # Ruby code style linting
-  gem "grade_runner", "~> 0.0.14" # Automated grading
+  gem "grade_runner", "~> 0.0.15" # Automated grading
 end
 
 group :development do
