@@ -522,7 +522,6 @@ DEPENDENCIES
   http
   importmap-rails
   jbuilder
-  kaminari
   pagy
   pg (~> 1.1)
   propshaft
