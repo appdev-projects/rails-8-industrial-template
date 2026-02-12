@@ -17,7 +17,6 @@ gem "tzinfo-data", platforms: %i[windows jruby] # Timezone data for Windows/JRub
 gem "pundit"                          # Authorization (who can do what)
 gem "strip_attributes"                # Remove whitespace from model attributes
 gem "validate_url"                    # URL validation for models
-gem "pagy"                            # Alternative pagination (faster)
 gem "ransack"                         # Search and filtering
 gem "active_link_to"                  # Highlight current page links
 gem "dotenv"                          # Load environment variables from .env
