@@ -17,7 +17,6 @@ gem "tzinfo-data", platforms: %i[windows jruby] # Timezone data for Windows/JRub
 gem "pundit"                          # Authorization (who can do what)
 gem "strip_attributes"                # Remove whitespace from model attributes
 gem "validate_url"                    # URL validation for models
-gem "carrierwave"                     # File uploads
 gem "cloudinary"                      # Cloud image storage and CDN
 gem "faker"                           # Generate fake data for testing/seeds
 gem "kaminari"                        # Pagination
