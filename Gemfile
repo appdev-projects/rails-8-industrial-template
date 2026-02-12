@@ -23,6 +23,7 @@ gem "dotenv"                          # Load environment variables from .env
 gem "http"                            # Simple HTTP client for APIs
 gem "rollbar"                         # Error tracking in production
 gem "ai-chat", "~> 0.5.4"             # AI::Chat integration via OpenAI APIs
+gem "carrierwave" # File upload and management
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Ruby debugger
