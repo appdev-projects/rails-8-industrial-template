@@ -24,7 +24,7 @@ gem "tsort" # Required for Ruby 4.0+ (moving out of default gems)
 group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Ruby debugger
   gem "brakeman", "~> 7.1.1", require: false    # Security vulnerability scanner
-  gem "rspec-rails", "~> 7.1.1"                 # Testing framework
+  gem "rspec-rails", "~> 8.0" # Testing framework
   gem "rubocop-rails-omakase", require: false   # Ruby code style linting
   gem "grade_runner", "~> 0.0.16" # Automated grading
 end
