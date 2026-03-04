@@ -19,6 +19,7 @@ gem "dotenv"                          # Load environment variables from .env
 gem "http"                            # Simple HTTP client for APIs
 gem "rollbar"                         # Error tracking in production
 gem "cgi" # Required for Ruby 4.0+ (removed from stdlib)
+gem "tsort" # Required for Ruby 4.0+ (moving out of default gems)
 
 group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Ruby debugger

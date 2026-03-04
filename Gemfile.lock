@@ -443,6 +443,7 @@ GEM
     thruster (0.1.12-x86_64-darwin)
     thruster (0.1.12-x86_64-linux)
     timeout (0.4.3)
+    tsort (0.2.0)
     turbo-rails (2.0.13)
       actionpack (>= 7.1.0)
       railties (>= 7.1.0)
@@ -523,6 +524,7 @@ DEPENDENCIES
   solid_queue
   stimulus-rails
   thruster
+  tsort
   turbo-rails
   tzinfo-data
   web-console
