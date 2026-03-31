@@ -501,7 +501,6 @@ DEPENDENCIES
   active_link_to
   amazing_print
   annotaterb
-  base64 (>= 0.3.0)
   better_errors
   binding_of_caller (~> 2.0.0)
   bootsnap
