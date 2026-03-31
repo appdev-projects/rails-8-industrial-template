@@ -27,6 +27,7 @@ group :development, :test do
   gem "rspec-rails", "~> 8.0" # Testing framework
   gem "rubocop-rails-omakase", require: false   # Ruby code style linting
   gem "grade_runner", "~> 0.0.16" # Automated grading
+  gem "rubocop", ">= 1.86" # Linting and code style enforcement
 end
 
 group :development do
