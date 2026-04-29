@@ -42,5 +42,13 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n== Creating test database =="
   system! "bin/rails db:create RAILS_ENV=test"
+
+  unless ENV["CODESPACE_NAME"]
+    puts "\n== Installing editor format-on-save gems (rufo, htmlbeautifier) =="
+    %w[rufo htmlbeautifier].each do |g|
+      system!("gem install #{g}") unless system("gem list -i -e #{g} > /dev/null 2>&1")
+    end
+  end
+
   puts "\n== Initial setup complete =="
 end

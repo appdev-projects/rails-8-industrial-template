@@ -15,7 +15,6 @@ gem "bootsnap", require: false        # Faster boot times via caching
 gem "thruster", require: false        # HTTP caching/compression for Puma
 gem "tzinfo-data", platforms: %i[windows jruby] # Timezone data for Windows/JRuby
 gem "active_link_to"                  # Highlight current page links
-gem "dotenv"                          # Load environment variables from .env
 gem "http"                            # Simple HTTP client for APIs
 gem "rollbar"                         # Error tracking in production
 gem "cgi" # Required for Ruby 4.0+ (removed from stdlib)
@@ -40,7 +39,6 @@ group :development do
   gem "htmlbeautifier"                # Format HTML/ERB files
   gem "pry-rails"                     # Better Rails console
   gem "rails_db", "~> 2.5.0"          # Database viewer in browser
-  gem "rails-erd"                     # Generate ER diagrams
   gem "rufo"                          # Ruby code formatter
   gem "web-console"                   # Console on exception pages
   gem "pry", "~> 0.16" # Interactive Ruby shell

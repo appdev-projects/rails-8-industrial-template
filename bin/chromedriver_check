@@ -33,6 +33,10 @@ if check_for_js_tests || everyday_rspec_codespace?
   # Next, check if chromedriver is already installed
   if chromedriver_installed?
     puts "\n== JavaScript tests found, but chromedriver is already installed. Skipping installation. =="
+  elsif RUBY_PLATFORM.match?(/darwin/)
+    puts "\n== JavaScript tests found and chromedriver not detected. =="
+    puts "   On macOS, install with: brew install --cask chromedriver"
+    puts "   (Skipping automatic install -- bin/chromedriver_install is Linux-only.)"
   else
     puts "\n== JavaScript tests found and chromedriver not detected. Running installation... =="
     system "bin/chromedriver_install"
