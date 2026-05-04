@@ -11,18 +11,25 @@ if File.exist?(chrome_binary) && File.exist?(chromedriver_binary)
   Selenium::WebDriver::Chrome::Service.driver_path = chromedriver_binary
 end
 
-Capybara.register_driver :headless_chrome do |app|
-  options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument("--headless")
-  options.add_argument("--disable-gpu")
-  options.add_argument("--no-sandbox")
-  options.add_argument("--disable-dev-shm-usage")
+# Register both our custom :headless_chrome AND override Capybara's built-in
+# :selenium_chrome_headless (which Rails system tests use by default) with the
+# flags Chrome needs to launch inside a container: no setuid sandbox available,
+# limited /dev/shm. Without --no-sandbox / --disable-dev-shm-usage, Chrome exits
+# immediately during session creation with "Chrome instance exited."
+%i[headless_chrome selenium_chrome_headless].each do |driver_name|
+  Capybara.register_driver driver_name do |app|
+    options = Selenium::WebDriver::Chrome::Options.new
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
-  Capybara::Selenium::Driver.new(
-    app,
-    browser: :chrome,
-    options: options
-  )
+    Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      options: options
+    )
+  end
 end
 
 Capybara.default_max_wait_time = 3
