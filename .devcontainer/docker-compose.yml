@@ -1,6 +1,6 @@
 services:
   devcontainer:
-    image: firstdraft/appdev-rails-8-phase2
+    image: firstdraft/appdev-rails-8-phase2-libs-test
     volumes:
       - ../..:/workspaces:cached
     network_mode: service:db
