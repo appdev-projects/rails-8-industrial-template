@@ -1,7 +1,13 @@
 require "rails_helper"
 
-describe "This project" do
-  it "is not graded" do
-    expect(1).to eq(1)
+RSpec.describe "Testing", type: :system do
+  before do
+    driven_by(:selenium_chrome_headless)
+  end
+
+  it "test spec" do
+    visit "/"
+    
+    expect(page).to have_content("Books")
   end
 end
