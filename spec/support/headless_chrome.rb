@@ -4,11 +4,11 @@
 # anything. Without this Selenium Manager auto-downloads its own (full) Chrome
 # and chromedriver into ~/.cache/selenium/, and the downloaded Chrome can't
 # run on the codespace image (no GTK libs), so chromedriver dies at startup.
-chrome_binary = "/usr/local/bin/chrome-headless-shell"
-chromedriver_binary = "/usr/local/bin/chromedriver"
-if File.exist?(chrome_binary) && File.exist?(chromedriver_binary)
-  Selenium::WebDriver::Chrome.path = chrome_binary
-  Selenium::WebDriver::Chrome::Service.driver_path = chromedriver_binary
+CHROME_BINARY = "/usr/local/bin/chrome-headless-shell"
+CHROMEDRIVER_BINARY = "/usr/local/bin/chromedriver"
+if File.exist?(CHROME_BINARY) && File.exist?(CHROMEDRIVER_BINARY)
+  Selenium::WebDriver::Chrome.path = CHROME_BINARY
+  Selenium::WebDriver::Chrome::Service.driver_path = CHROMEDRIVER_BINARY
 end
 
 # Register both our custom :headless_chrome AND override Capybara's built-in
