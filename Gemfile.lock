@@ -118,7 +118,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     debug_inspector (1.2.0)
-    dev_toolbar (2.1.0)
+    dev_toolbar (3.0.0)
       rails (>= 7.0)
     diff-lcs (1.6.0)
     domain_name (0.6.20240107)
@@ -500,7 +500,7 @@ DEPENDENCIES
   capybara
   cgi
   debug
-  dev_toolbar (~> 2.1.0)
+  dev_toolbar (~> 3.0.0)
   dotenv
   grade_runner (~> 0.0.16)
   haikunator
